@@ -1,0 +1,117 @@
+/* Global styles */
+body {
+  background-color: #000000;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Main container */
+.main {
+  max-width: 600px;
+  margin: 50px auto;
+  background: linear-gradient(90deg, #ff9100, #ffff00);
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #000000;
+}
+
+/* Select elements */
+.sel {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* Input elements */
+.numb {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f2f2f2;
+  color: #000000;
+}
+
+/* Equal sign */
+.equalsto {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: #000000;
+}
+
+/* Additional effects for demonstration */
+.first {
+  background-color: #000000;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.second {
+  background-color: #000000;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.first input,
+.second input,
+.first select,
+.second select {
+  transition: background-color 0.3s ease;
+}
+
+.first input:hover,
+.second input:hover,
+.first select:hover,
+.second select:hover {
+  background: linear-gradient(90deg, #95f3d5, #6182ef);
+}
+
+.first input:focus,
+.second input:focus,
+.first select:focus,
+.second select:focus {
+  background: linear-gradient(90deg, #95f3d5, #003cff);
+}
+
+/* Media queries */
+@media screen and (max-width: 767px) {
+  .main {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .sel,
+  .numb {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main {
+    margin: 30px auto;
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+
+  .sel,
+  .numb {
+    font-size: 12px;
+  }
+}

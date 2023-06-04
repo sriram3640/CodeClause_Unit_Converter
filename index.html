@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Unit Converter</title>
+    <link href="style.css" rel="stylesheet">
+    <script type="text/javascript" src="script.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <h1>UNIT CONVERTER</h1>
+
+      <form name="choose_property">
+        <span>
+          <select class="sel" name="properties" size=1 onChange="main_property(this, document.firstform.values); main_property(this, document.secondform.values)">
+          </select>
+        </span>
+      </form>
+
+      <div class="first">
+        <form name="firstform" onSubmit="return false">
+          <input type="text" class="numb" name="input_unit" maxlength="20" value="0" onKeyUp="find_value(document.firstform, document.secondform)">
+          <span>
+            <select name="values" onChange="find_value(document.secondform, document.firstform)">
+            </select>
+          </span>
+        </form>
+      </div> 
+
+      <div class="equalsto">
+        <p>=</p>
+      </div> 
+
+      <div class="second">
+        <form name="secondform" onSubmit="return false">
+          <input type="text" class="numb" name="input_unit" maxlength="20" value="0" onkeyup="find_value(document.secondform, document.firstform)">
+          <span>
+            <select name="values" onChange="find_value(document.firstform, document.secondform)">
+            </select>
+          </span>
+        </form>
+      </div> 
+    </div>
+  </body>
+</html>
