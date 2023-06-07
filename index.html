@@ -1,311 +1,44 @@
-<!DOCTYPE html>
 <html>
-<head>
-  <title>Sriram Surisetti - Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
-  <script src="script.js"></script>
-</head>
-<body>
-  <div class="page" id="home-page">
-      <div class="navbar-container">
-      <div class="nav-left">
-        <h1>Sriram Surisetti</h1>
-      </div>
-      <div class="nav-right">
-        <a href="#home-page">Home</a>
-        <a href="#sk">Skills</a>
-        <a href="#education">Education</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#achievements">Achievements</a>
-        <a href="#certifications">Certifications</a>
-        <a href="#contact">Contact</a>
-      </div>
-      </div>
-    <div class="home" id="home">
-      <div class="name">
-        <img src="images/home.png" alt="no-image">
-        <div class="home-about">
-        <center><h1>Hello, I'm Sriram Surisetti</h1>
-        <h3>Aspiring B.Tech Computer Science Candidate at NIT Andhra Pradesh</h3></center>
-        <em><p>I am a dedicated and ambitious candidate pursuing B.Tech in Computer Science with a strong passion for web development and data science. I am actively seeking opportunities to apply my knowledge and skills in a dynamic and collaborative environment, aiming to make a significant impact in these fields.
-          Throughout my academic journey, I have consistently pursued excellence, earning recognition for my strong work ethic, adaptability, and problem-solving abilities. My solid foundation in computer science fundamentals, including Data Structures and Algorithms, Operating Systems, Computer Networks, and Database Management Systems (DBMS), has provided me with a deep understanding of web development, machine learning, artificial intelligence, as well as natural language processing. I have gained practical experience through internships in data science and artificial intelligence, further enhancing my skills.
-         </p><p>Beyond academics, I actively engage in extracurricular activities, such as chess, where I have achieved consecutive gold medals at my college. Additionally, during my first year of B.Tech, I served as an executive of the Electronics and Communication Engineering Association (ECEA), where I honed my leadership, teamwork, and communication skills. These experiences have demonstrated my ability to collaborate effectively with diverse teams to achieve shared objectives.
-          As a lifelong learner, I am committed to staying updated with the latest industry trends and advancements. I thrive on taking on new challenges that push me outside my comfort zone, enabling me to continuously grow both personally and professionally.</p>
-        </em></div>
-      </div>
+  <head>
+    <meta charset="utf-8">
+    <title>Unit Converter</title>
+    <link href="style.css" rel="stylesheet">
+    <script type="text/javascript" src="script.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <h1>UNIT CONVERTER</h1>
+
+      <form name="choose_property">
+        <span>
+          <select class="sel" name="properties" size=1 onChange="main_property(this, document.firstform.values); main_property(this, document.secondform.values)">
+          </select>
+        </span>
+      </form>
+
+      <div class="first">
+        <form name="firstform" onSubmit="return false">
+          <input type="text" class="numb" name="input_unit" maxlength="20" value="0" onKeyUp="find_value(document.firstform, document.secondform)">
+          <span>
+            <select name="values" onChange="find_value(document.secondform, document.firstform)">
+            </select>
+          </span>
+        </form>
+      </div> 
+
+      <div class="equalsto">
+        <p>=</p>
+      </div> 
+
+      <div class="second">
+        <form name="secondform" onSubmit="return false">
+          <input type="text" class="numb" name="input_unit" maxlength="20" value="0" onkeyup="find_value(document.secondform, document.firstform)">
+          <span>
+            <select name="values" onChange="find_value(document.firstform, document.secondform)">
+            </select>
+          </span>
+        </form>
+      </div> 
     </div>
-  </div>
-  
-  <div class="page" id="sk">
-    <section class="sk-me">
-      <div class="container">
-        <div class="sk-content">
-          <div class="left-content">
-            <div>
-              <h1 class="sk-heading">More About Me</h1>
-            </div>
-            <img src="images/profile.jpeg" alt="Profile Image" />
-            <div class="cont">
-            <p><em>
-              I have cultivated a diverse range of skills through rigorous external courses and my academic journey, delving into prominent programming languages such as Python, C, C++, Java, JavaScript, HTML, CSS, as well as embracing powerful frameworks like Node.js, React, and PHP. This relentless pursuit of knowledge has not only equipped me with a versatile skill set but has also fueled my insatiable appetite for continuous growth and learning. I eagerly anticipate the opportunity to delve even deeper into the vast realm of programming and expand my proficiency in emerging technologies.
-            </em>
-            </p>
-          </div>
-          </div>
-          <div class="right-content">
-            <div class="skills-bar">
-              <center><h1 class="sk-heading-2">My Skills</h1></center>
-              <div class="bar">
-                <div class="progress-line html" data-progress="80%"></div>
-                <div class="details">HTML</div>
-              </div>
-              <div class="bar">
-                <div class="progress-line css" data-progress="70%"></div>
-                <div class="details">CSS</div>
-              </div>
-              <div class="bar">
-                <div class="progress-line python" data-progress="80%"></div>
-                <div class="details">Python</div>
-              </div>
-              <div class="bar">
-                <div class="progress-line javascript" data-progress="60%"></div>
-                <div class="details">JavaScript</div>
-              </div>
-              <div class="bar">
-                <div class="progress-line c" data-progress="80%"></div>
-                <div class="details">C++ Programming</div>
-              </div>
-              <div class="bar">
-                <div class="progress-line java" data-progress="70%"></div>
-                <div class="details">Java Programming</div>
-              </div>
-              <div class="bar">
-                <div class="progress-line sql" data-progress="70%"></div>
-                <div class="details">SQL</div>
-              </div>
-              <div class="bar">
-                <div class="progress-line php" data-progress="70%"></div>
-                <div class="details">PHP</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
-  <div class="page" id="education">
-    <section class="education">
-      <div class="container">
-        <div class="edu-content">
-          <div class="edu-heading">
-            <h1>Education</h1>
-          </div>
-          <div class="edu-details">
-            <div class="edu-item">
-              <h2>Sri Chaitanya School</h2>
-              <p>High School</p>
-              <p>Year: 2017 - 2018</p>
-              <p>CGPA: 10/10</p>
-            </div>
-            <div class="edu-arrow">
-              <span class="arrow-emoji">&#x2192;</span>
-            </div>
-            <div class="edu-item">
-              <h2>Sri Chaitanya College</h2>
-              <p>Intermediate (MPC)</p>
-              <p>Year: 2018 - 2020</p>
-              <p>Marks: 971/1000</p>
-            </div>
-            <div class="edu-arrow">
-              <span class="arrow-emoji">&#x2192;</span>
-            </div>
-            <div class="edu-item">
-              <h2>NIT Andhra Pradesh</h2>
-              <p>Bachelor of Technology (B.Tech) in Computer Science</p>
-              <p>Year: 2020 - Present</p>
-              <p>CGPA: 8.13/10</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
-  
-  
-  
-  <div class="page" id="portfolio">
-    <section class="portfolio">
-      <div class="container">
-        <div class="proj-heading">
-          <h1>Portfolio</h1>
-        </div>
-        <div class="portfolio-content">
-          <div class="proj-1">
-              <h2>Location Bag</h2>
-              <p>Built using HTML, CSS, JAVASCRIPT, PHP, and MySQL</p>
-              <div class="image-container">
-                <img src="images/loc_1.png" class="portfolio-image">
-                <img src="images/loc_2.png" class="portfolio-image">
-                <img src="images/loc_3.png" class="portfolio-image">
-                <img src="images/loc_4.png" class="portfolio-image">
-                <img src="images/loc_5.png" class="portfolio-image">
-              </div>
-              <button><a href="https://github.com/sriram3640/Location_Bag" target="_blank">View Source</a></button>
-          </div>
-  
-          <div class="proj-2">
-              <h2>Gold Price Prediction</h2>
-              <p>Built using Python, code libraries, and Random Forest Regression</p>
-              <div class="image-container">
-                <img src="images/gold_1.png" class="portfolio-image">
-                <img src="images/gold_2.png" class="portfolio-image">
-                <img src="images/gold_3.png" class="portfolio-image">
-              </div>
-              <button><a href="https://github.com/sriram3640/Gold_Price_Prediction" target="_blank">View Source</a></button>
-          </div>
-
-          <div class="proj-3">
-            <h2>Optimizing video inference</h2>
-            <p>Studied on various research papers of video inference optimising systems and implemented this using significant python libraries</p>
-            <button><a href="https://github.com/sriram3640/Optimizing-video-inference" target="_blank">View Source</a></button>
-        </div>
-
-        <div class="proj-4">
-          <h2>Unit Converter</h2>
-          <p>Built using HTML,CSS & JAVASCRIPT</p>
-          <div class="image-container">
-            <img src="images/unit_1.png" class="portfolio-image">
-            <img src="images/unit_2.png" class="portfolio-image">
-            <img src="images/unit_3.png" class="portfolio-image">
-          </div>
-          <button><a href="https://github.com/sriram3640/Unit_Converter" target="_blank">View Source</a></button>
-      </div>
-      <div id="image-popup" class="image-popup">
-        <img src="" id="popup-image" class="popup-image">
-      </div>
-          <div class="extra">
-          <center>see all my projects here: <a href="https://github.com/sriram3640">Click here!</a></center>
-        </div>
-        </div>
-      </div>
-    </section>
-  </div>
-  <div class="page" id="achievements">
-    <section class="achievements">
-      <div class="container">
-        <div class="achievements-content">
-          <div class="achievements-heading">
-            <h1>Noteworthy Achievements</h1>
-          </div>
-          <div class="achievements-details">
-            <div class="achievement-item">
-              <h2 class="achievement-title">Exemplary Rank in POLYCET Examination</h2>
-              <div class="achievement-description">
-                <p>Earned an exemplary rank of 56th in the state and secured the first position in the district in the prestigious POLYCET examination</p>
-                <p>Year: 2018</p>
-                <p>AP POLYCET EXAM</p>
-              </div>
-            </div>
-            <div class="achievement-item">
-              <h2 class="achievement-title">Remarkable Rank in PREPSAT Hiring Jobathon</h2>
-              <div class="achievement-description">
-                <p>Achieved a remarkable rank of 831 out of 90,000 participants in the highly competitive PREPSAT Hiring Jobathon</p>
-                <p>Year: 2023</p>
-                <p>PREPINSTA</p>
-              </div>
-            </div>
-            <div class="achievement-item">
-              <h2 class="achievement-title">Exceptional Problem-Solving Skills</h3>
-              <div class="achievement-description">
-                <p>Solved over 300 complex coding problems across multiple renowned coding platforms, showcasing my exceptional problem-solving skills</p>
-                <p>GEEKS FOR GEEKS: <a href="https://auth.geeksforgeeks.org/user/sriram_surisetti" target="_blank">My Profile</a></p>
-                <p>LEETCODE: <a href="https://leetcode.com/Sriram_Surisetti" target="_blank">My Profile</a></p>
-              </div>
-            </div>
-            <div class="achievement-item">
-              <h2 class="achievement-title">Gold Medals in Chess</h2>
-              <div class="achievement-description">
-                <p>Accomplished the distinction of earning two gold medals in chess during the college intramurals</p>
-                <p>Year: 2022, 2023</p>
-                <p>NIT ANDHRA PRADESH</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
-  
-  <div class="page" id="certifications">
-    <section class="certifications">
-      <div class="container">
-        <div class="certifications-content">
-          <div class="certifications-heading">
-            <h1>Internships & Certifications</h1>
-          </div>
-          <div class="certifications-details">
-            <div class="row">
-              <div class="certification-item">
-                <h3>Data Science</h3>
-                <p>Issued by: Internshala</p>
-                <p>Year: 2022</p>
-                <p>Skills Acquired: Statistical Modelling, ML Algorithms</p>
-              </div>
-              <div class="certification-item">
-                <h3>Artificial Intelligence with Python</h3>
-                <p>Issued by: E-CELL IIT GUWAHATHI</p>
-                <p>Year: 2021</p>
-                <p>Skills Acquired: Artificial Intelligence, Fundamental Machine Learning Projects</p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="certification-item">
-                <h3>C(Programming Language)</h3>
-                <p>Issued by: Study Section</p>
-                <p>Year: 2021</p>
-                <p>Skills Acquired: C Language Proficiency</p>
-              </div>
-              <div class="certification-item">
-                <h3>IoT,Robotics & Embedded Systems</h3>
-                <p>Issued by: APSIS SOLUTIONS </p>
-                <p>Year: 2021</p>
-                <p>Skills Acquired: Internet of things, Arduino(IDE)</p>
-              </div>
-              <div class="certification-item">
-                <h3>Introduction to Data Science, IIT Kharagpur</h3>
-                <p>Issued by: NPTEL</p>
-                <p>Year: 2022</p>
-                <p>Skills Acquired: Data analysis, Data visualization, Python Programming</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
-  
-  
-  <div class="page" id="contact">
-    <section class="contact">
-      <div class="container">
-        <div class="contact-content">
-          <h2>Contact Me</h2>
-          <p class="mail">
-            Feel free to get in touch with me at <b><i>sriramsurisetti3412@gmail.com</i></b>
-          </p>
-          <p class="mail">Phone: <b>+91-7989117576</b></p>
-          <p class="links">Or find me on:</p>
-          <div class="social-links">
-            <a href="https://www.linkedin.com/in/sriram-surisetti-9670ba225/" target="_blank">LinkedIn</a>
-            <a href="https://github.com/sriram3640" target="_blank">GitHub</a>
-            <a href="https://www.instagram.com/sriram_surisetti_1/" target="_blank">Instagram</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
-  
-  <script src="script.js"></script>
-</body>
+  </body>
 </html>
